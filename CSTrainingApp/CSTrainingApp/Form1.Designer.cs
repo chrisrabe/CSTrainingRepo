@@ -36,20 +36,19 @@
             this.nameField = new System.Windows.Forms.TextBox();
             this.ageField = new System.Windows.Forms.TextBox();
             this.bDayField = new System.Windows.Forms.TextBox();
-            this.greeting = new System.Windows.Forms.Label();
-            this.result = new System.Windows.Forms.Label();
+            this.greetingLabel = new System.Windows.Forms.Label();
+            this.resultText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(59, 18);
+            this.titleLabel.Location = new System.Drawing.Point(27, 18);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(222, 30);
+            this.titleLabel.Size = new System.Drawing.Size(293, 30);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "C# Training App";
-            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
+            this.titleLabel.Text = "Greeter Application";
             // 
             // nameLabel
             // 
@@ -60,7 +59,6 @@
             this.nameLabel.Size = new System.Drawing.Size(53, 20);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Name";
-            this.nameLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // ageLabel
             // 
@@ -93,6 +91,7 @@
             this.submitBtn.TabIndex = 4;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // nameField
             // 
@@ -115,25 +114,26 @@
             this.bDayField.Size = new System.Drawing.Size(169, 22);
             this.bDayField.TabIndex = 7;
             // 
-            // greeting
+            // greetingLabel
             // 
-            this.greeting.AutoSize = true;
-            this.greeting.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greeting.Location = new System.Drawing.Point(13, 293);
-            this.greeting.Name = "greeting";
-            this.greeting.Size = new System.Drawing.Size(80, 20);
-            this.greeting.TabIndex = 8;
-            this.greeting.Text = "Greeting:";
+            this.greetingLabel.AutoSize = true;
+            this.greetingLabel.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greetingLabel.Location = new System.Drawing.Point(13, 293);
+            this.greetingLabel.Name = "greetingLabel";
+            this.greetingLabel.Size = new System.Drawing.Size(80, 20);
+            this.greetingLabel.TabIndex = 8;
+            this.greetingLabel.Text = "Greeting:";
             // 
-            // result
+            // resultText
             // 
-            this.result.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.result.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.result.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.result.Location = new System.Drawing.Point(12, 324);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(324, 143);
-            this.result.TabIndex = 9;
+            this.resultText.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.resultText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.resultText.Cursor = System.Windows.Forms.Cursors.No;
+            this.resultText.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultText.Location = new System.Drawing.Point(12, 324);
+            this.resultText.Name = "resultText";
+            this.resultText.Size = new System.Drawing.Size(324, 143);
+            this.resultText.TabIndex = 9;
             // 
             // mainForm
             // 
@@ -141,8 +141,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(348, 488);
-            this.Controls.Add(this.result);
-            this.Controls.Add(this.greeting);
+            this.Controls.Add(this.resultText);
+            this.Controls.Add(this.greetingLabel);
             this.Controls.Add(this.bDayField);
             this.Controls.Add(this.ageField);
             this.Controls.Add(this.nameField);
@@ -153,7 +153,7 @@
             this.Controls.Add(this.titleLabel);
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CSTrainingApp";
+            this.Text = "GreetingApp";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,8 +169,8 @@
         private System.Windows.Forms.TextBox nameField;
         private System.Windows.Forms.TextBox ageField;
         private System.Windows.Forms.TextBox bDayField;
-        private System.Windows.Forms.Label greeting;
-        private System.Windows.Forms.Label result;
+        private System.Windows.Forms.Label greetingLabel;
+        private System.Windows.Forms.Label resultText;
     }
 }
 

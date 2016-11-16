@@ -17,19 +17,22 @@ namespace CSTrainingApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void submitBtn_Click(object sender, EventArgs e)
         {
+            string name = nameField.Text;
+            string age = ageField.Text;
+            string bday = bDayField.Text;
 
-        }
+            var greeting = String.Format("Hello {0}. You are {1} years old. Your birthday is at {2}.", name, age, bday);
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
+            if (name == "" || age == null || bday == null)
+            {
+                resultText.Text = "Hello, please enter values in the fields";
+            }
+            else
+            {
+                resultText.Text = greeting;
+            }
         }
     }
 }
